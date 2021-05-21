@@ -1,4 +1,4 @@
-# Android App Compose Template
+# HatenaBookmarkComposeSample
 
 ## SetUp
 
