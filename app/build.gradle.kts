@@ -16,7 +16,7 @@ android {
   buildToolsVersion = Versions.buildToolsVersion
 
   defaultConfig {
-    applicationId = "dev.dai.hatenabookmark"
+    applicationId = "dev.dai.hatena_bookmark"
     minSdk = Versions.minSdkVersion
     targetSdk = Versions.targetSdkVersion
     versionCode = generateVersionCode()
