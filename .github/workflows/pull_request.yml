@@ -1,0 +1,56 @@
+name: Run pull request CI
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+
+      - name: set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Gradle cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.gradle
+          key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
+          restore-keys: |
+            jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
+
+      - name: Run Assemble & Check & Tests
+        run: ./gradlew assembleDebug check test
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: report-outputs
+          path: app/build/reports
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-result-outputs
+          path: app/build/test-results
+
+      - name: Bundle cache
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: gems-{{ checksum "Gemfile.lock" }}
+          restore-keys: |
+            gems-{{ checksum "Gemfile.lock" }}
+
+      - name: Run Danger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gem install bundler
+          bundle install --path vendor/bundle
+          bundle exec danger
