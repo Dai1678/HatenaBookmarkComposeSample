@@ -16,7 +16,7 @@ android {
   buildToolsVersion = Versions.buildToolsVersion
 
   defaultConfig {
-    applicationId = "dev.dai.sample"
+    applicationId = "dev.dai.hatena_bookmark"
     minSdk = Versions.minSdkVersion
     targetSdk = Versions.targetSdkVersion
     versionCode = generateVersionCode()
@@ -101,7 +101,7 @@ releasesHub {
   pullRequestsMax = 10
   baseBranch = "develop"
   gitHubRepositoryOwner = "Dai1678"
-  gitHubRepositoryName = "android-app-template"
+  gitHubRepositoryName = "HatenaBookmarkComposeSample"
 }
 
 fun generateVersionCode(): Int {
