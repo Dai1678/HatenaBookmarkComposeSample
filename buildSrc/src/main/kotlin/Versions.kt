@@ -18,7 +18,6 @@ object Versions {
   const val material = "com.google.android.material:material:1.3.0"
   const val navigation = "androidx.navigation:navigation-compose:2.4.0-alpha01"
   const val releasesHub = "com.dipien:releases-hub-gradle-plugin:2.0.2"
-  const val retrofit2 = "com.squareup.retrofit2:retrofit:2.9.0"
   const val timber = "com.jakewharton.timber:timber:4.7.1"
 
   object Accompanist {
@@ -70,6 +69,11 @@ object Versions {
   object Okhttp3 {
     const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.1"
     const val okhttp3 = "com.squareup.okhttp3:okhttp:4.9.1"
+  }
+
+  object Retrofit2 {
+    const val retrofit2 = "com.squareup.retrofit2:retrofit:2.9.0"
+    const val simpleXml = "com.squareup.retrofit2:converter-simplexml:2.7.1"
   }
 
   object Test {
