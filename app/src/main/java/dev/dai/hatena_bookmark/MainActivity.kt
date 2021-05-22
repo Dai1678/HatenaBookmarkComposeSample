@@ -11,28 +11,28 @@ import androidx.compose.ui.tooling.preview.Preview
 import dev.dai.hatena_bookmark.ui.theme.HatenaBookmarkComposeSampleTheme
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            HatenaBookmarkComposeSampleTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
-            }
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContent {
+      HatenaBookmarkComposeSampleTheme {
+        // A surface container using the 'background' color from the theme
+        Surface(color = MaterialTheme.colors.background) {
+          Greeting("Android")
         }
+      }
     }
+  }
 }
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+  Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    HatenaBookmarkComposeSampleTheme {
-        Greeting("Android")
-    }
+  HatenaBookmarkComposeSampleTheme {
+    Greeting("Android")
+  }
 }
