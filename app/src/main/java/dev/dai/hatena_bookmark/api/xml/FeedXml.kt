@@ -8,7 +8,7 @@ import org.simpleframework.xml.Root
 @Root(name = "rdf:RDF", strict = false)
 data class FeedXml(
   @ElementList(inline = true)
-  val feedList: List<FeedItemXml>
+  val feeds: List<FeedItemXml>
 )
 
 @Root(name = "item", strict = false)
