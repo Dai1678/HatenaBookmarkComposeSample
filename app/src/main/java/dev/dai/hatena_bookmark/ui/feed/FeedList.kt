@@ -16,16 +16,23 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.coil.rememberCoilPainter
+import com.google.accompanist.swiperefresh.SwipeRefresh
+import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import dev.dai.hatena_bookmark.R
 import dev.dai.hatena_bookmark.model.Feed
 import dev.dai.hatena_bookmark.ui.theme.HatenaBookmarkComposeSampleTheme
 
 @Composable
-fun FeedList(feedList: List<Feed>) {
-  LazyColumn {
-    items(feedList) { feed ->
-      FeedItem(feed, feedList.first() == feed)
-      Divider()
+fun FeedList(feedList: List<Feed>, isLoading: Boolean, onRefresh: () -> Unit) {
+  SwipeRefresh(
+    state = rememberSwipeRefreshState(isRefreshing = isLoading),
+    onRefresh = { onRefresh() }
+  ) {
+    LazyColumn(modifier = Modifier.fillMaxSize()) {
+      items(feedList) { feed ->
+        FeedItem(feed, feedList.first() == feed)
+        Divider()
+      }
     }
   }
 }
