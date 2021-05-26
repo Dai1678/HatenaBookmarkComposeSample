@@ -8,10 +8,10 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import dev.dai.hatena_bookmark.model.FeedCategory
 import dev.dai.hatena_bookmark.ui.component.ScrollableTabPager
+import dev.dai.hatena_bookmark.ui.feed.FeedScreen
 import dev.dai.hatena_bookmark.ui.theme.HatenaBookmarkComposeSampleTheme
 
 class MainActivity : ComponentActivity() {
@@ -40,11 +40,7 @@ private fun AppContent() {
     modifier = Modifier.fillMaxSize()
   ) {
     ScrollableTabPager(pageTitleList = FeedCategory.getCategoryNameList()) { page ->
-      Text(
-        text = FeedCategory.fromOrdinal(page).categoryName,
-        modifier = Modifier.fillMaxSize(),
-        textAlign = TextAlign.Center
-      )
+      FeedScreen(feedCategory = FeedCategory.fromOrdinal(page))
     }
   }
 }
