@@ -138,6 +138,7 @@ dependencies {
   implementation(Versions.Accompanist.coil)
   implementation(Versions.Accompanist.insets)
   implementation(Versions.Accompanist.pager)
+  implementation(Versions.Accompanist.pagerIndicator)
   implementation(Versions.Accompanist.systemUiController)
   implementation(Versions.Accompanist.swipeRefreshLayout)
   implementation(Versions.activity)
