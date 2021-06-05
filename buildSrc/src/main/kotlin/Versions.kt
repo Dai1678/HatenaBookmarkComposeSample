@@ -24,6 +24,7 @@ object Versions {
     const val coil = "com.google.accompanist:accompanist-coil:0.10.0"
     const val insets = "com.google.accompanist:accompanist-insets:0.10.0"
     const val pager = "com.google.accompanist:accompanist-pager:0.10.0"
+    const val pagerIndicator = "com.google.accompanist:accompanist-pager-indicators:0.10.0"
     const val systemUiController = "com.google.accompanist:accompanist-systemuicontroller:0.10.0"
     const val swipeRefreshLayout = "com.google.accompanist:accompanist-swiperefresh:0.10.0"
   }
