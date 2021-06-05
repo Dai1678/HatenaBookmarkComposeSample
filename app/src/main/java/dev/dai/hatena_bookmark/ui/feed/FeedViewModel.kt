@@ -29,4 +29,8 @@ class FeedViewModel @Inject constructor(
     _uiState.value = _uiState.value.copy(loading = true)
     fetchFeedList(categoryName)
   }
+
+  fun clearError() {
+    _uiState.value = _uiState.value.copy(error = null)
+  }
 }

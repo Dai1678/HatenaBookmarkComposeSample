@@ -6,4 +6,6 @@ data class FeedUiState(
   val feedList: List<Feed> = emptyList(),
   val loading: Boolean = false,
   val error: Throwable? = null
-)
+) {
+  fun hasError(): Boolean = error != null
+}
