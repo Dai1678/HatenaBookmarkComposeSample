@@ -61,7 +61,6 @@ android {
     compose = true
 
     // Disable unused AGP features
-    buildConfig = false
     aidl = false
     renderScript = false
     resValues = false
@@ -139,6 +138,7 @@ dependencies {
   implementation(Versions.Accompanist.coil)
   implementation(Versions.Accompanist.insets)
   implementation(Versions.Accompanist.pager)
+  implementation(Versions.Accompanist.pagerIndicator)
   implementation(Versions.Accompanist.systemUiController)
   implementation(Versions.Accompanist.swipeRefreshLayout)
   implementation(Versions.activity)
@@ -168,7 +168,8 @@ dependencies {
   implementation(Versions.Okhttp3.okhttp3)
   implementation(Versions.material)
   implementation(Versions.navigation)
-  implementation(Versions.retrofit2)
+  implementation(Versions.Retrofit2.retrofit2)
+  implementation(Versions.Retrofit2.simpleXml)
   implementation(Versions.timber)
   kapt(Versions.Hilt.compiler)
   testImplementation(Versions.ArchCore.testing)

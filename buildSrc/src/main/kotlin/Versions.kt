@@ -18,13 +18,13 @@ object Versions {
   const val material = "com.google.android.material:material:1.3.0"
   const val navigation = "androidx.navigation:navigation-compose:2.4.0-alpha01"
   const val releasesHub = "com.dipien:releases-hub-gradle-plugin:2.0.2"
-  const val retrofit2 = "com.squareup.retrofit2:retrofit:2.9.0"
   const val timber = "com.jakewharton.timber:timber:4.7.1"
 
   object Accompanist {
     const val coil = "com.google.accompanist:accompanist-coil:0.10.0"
     const val insets = "com.google.accompanist:accompanist-insets:0.10.0"
     const val pager = "com.google.accompanist:accompanist-pager:0.10.0"
+    const val pagerIndicator = "com.google.accompanist:accompanist-pager-indicators:0.10.0"
     const val systemUiController = "com.google.accompanist:accompanist-systemuicontroller:0.10.0"
     const val swipeRefreshLayout = "com.google.accompanist:accompanist-swiperefresh:0.10.0"
   }
@@ -70,6 +70,11 @@ object Versions {
   object Okhttp3 {
     const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.1"
     const val okhttp3 = "com.squareup.okhttp3:okhttp:4.9.1"
+  }
+
+  object Retrofit2 {
+    const val retrofit2 = "com.squareup.retrofit2:retrofit:2.9.0"
+    const val simpleXml = "com.squareup.retrofit2:converter-simplexml:2.7.1"
   }
 
   object Test {
