@@ -78,7 +78,7 @@ android {
   }
 
   composeOptions {
-    kotlinCompilerExtensionVersion = "1.0.0-beta07"
+    kotlinCompilerExtensionVersion = "1.0.0-beta08"
   }
 
   lint {
@@ -153,11 +153,7 @@ dependencies {
   implementation(Versions.gson)
   implementation(Versions.Hilt.hilt)
   implementation(Versions.Kotlin.stdlib)
-  implementation(Versions.Lifecycle.liveData)
-  implementation(Versions.Lifecycle.runtime)
-  implementation(Versions.Lifecycle.viewModel)
   implementation(Versions.Lifecycle.viewModelCompose)
-  implementation(Versions.Lifecycle.viewModelSavedState)
   implementation(Versions.Okhttp3.loggingInterceptor)
   implementation(Versions.Okhttp3.okhttp3)
   implementation(Versions.material)

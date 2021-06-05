@@ -4,11 +4,11 @@ object Versions {
   const val minSdkVersion = 23
   const val targetSdkVersion = 30
 
-  const val activity = "androidx.activity:activity-compose:1.3.0-alpha08"
+  const val activity = "androidx.activity:activity-compose:1.3.0-beta01"
   const val buildGradle = "com.android.tools.build:gradle:7.0.0-beta03"
   const val constraintLayout = "androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha07"
   const val core = "androidx.core:core-ktx:1.5.0"
-  const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
+  const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
   const val espresso = "androidx.test.espresso:espresso-core:3.3.0"
   const val extJunit = "androidx.test.ext:junit:1.1.2"
   const val gson = "com.google.code.gson:gson:2.8.6"
@@ -21,12 +21,12 @@ object Versions {
   const val timber = "com.jakewharton.timber:timber:4.7.1"
 
   object Accompanist {
-    const val coil = "com.google.accompanist:accompanist-coil:0.10.0"
-    const val insets = "com.google.accompanist:accompanist-insets:0.10.0"
-    const val pager = "com.google.accompanist:accompanist-pager:0.10.0"
-    const val pagerIndicator = "com.google.accompanist:accompanist-pager-indicators:0.10.0"
-    const val systemUiController = "com.google.accompanist:accompanist-systemuicontroller:0.10.0"
-    const val swipeRefreshLayout = "com.google.accompanist:accompanist-swiperefresh:0.10.0"
+    const val coil = "com.google.accompanist:accompanist-coil:0.11.1"
+    const val insets = "com.google.accompanist:accompanist-insets:0.11.1"
+    const val pager = "com.google.accompanist:accompanist-pager:0.11.1"
+    const val pagerIndicator = "com.google.accompanist:accompanist-pager-indicators:0.11.1"
+    const val systemUiController = "com.google.accompanist:accompanist-systemuicontroller:0.11.1"
+    const val swipeRefreshLayout = "com.google.accompanist:accompanist-swiperefresh:0.11.1"
   }
 
   object ArchCore {
@@ -48,16 +48,12 @@ object Versions {
   }
 
   object Kotlin {
-    const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.32"
-    const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
+    const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10"
+    const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:1.5.10"
   }
 
   object Lifecycle {
-    const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
-    const val runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
-    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
-    const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha05"
-    const val viewModelSavedState = "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1"
+    const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha06"
   }
 
   object Okhttp3 {
