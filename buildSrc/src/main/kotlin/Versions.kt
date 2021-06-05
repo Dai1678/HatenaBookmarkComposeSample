@@ -5,7 +5,7 @@ object Versions {
   const val targetSdkVersion = 30
 
   const val activity = "androidx.activity:activity-compose:1.3.0-alpha08"
-  const val buildGradle = "com.android.tools.build:gradle:7.0.0-beta01"
+  const val buildGradle = "com.android.tools.build:gradle:7.0.0-beta03"
   const val constraintLayout = "androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha07"
   const val core = "androidx.core:core-ktx:1.5.0"
   const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
@@ -34,24 +34,17 @@ object Versions {
   }
 
   object Compose {
-    const val animation = "androidx.compose.animation:animation:1.0.0-beta07"
-    const val compiler = "androidx.compose.compiler:compiler:1.0.0-beta07"
-    const val foundation = "androidx.compose.foundation:foundation:1.0.0-beta07"
-    const val layout = "androidx.compose.foundation:foundation-layout:1.0.0-beta07"
-    const val iconsExtended = "androidx.compose.material:material-icons-extended:1.0.0-beta07"
-    const val material = "androidx.compose.material:material:1.0.0-beta07"
-    const val runtime = "androidx.compose.runtime:runtime:1.0.0-beta07"
-    const val ui = "androidx.compose.ui:ui:1.0.0-beta07"
-    const val uiTest = "androidx.compose.ui:ui-test-junit4:1.0.0-beta07"
-    const val uiTooling = "androidx.compose.ui:ui-tooling:1.0.0-beta07"
-    const val uiUtil = "androidx.compose.ui:ui-util:1.0.0-beta07"
+    const val iconsExtended = "androidx.compose.material:material-icons-extended:1.0.0-beta08"
+    const val material = "androidx.compose.material:material:1.0.0-beta08"
+    const val ui = "androidx.compose.ui:ui:1.0.0-beta08"
+    const val uiTooling = "androidx.compose.ui:ui-tooling:1.0.0-beta08"
   }
 
   object Hilt {
-    const val compiler = "com.google.dagger:hilt-android-compiler:2.35.1"
+    const val compiler = "com.google.dagger:hilt-android-compiler:2.36"
     const val compose = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha02"
-    const val gradle = "com.google.dagger:hilt-android-gradle-plugin:2.35.1"
-    const val hilt = "com.google.dagger:hilt-android:2.35.1"
+    const val gradle = "com.google.dagger:hilt-android-gradle-plugin:2.36"
+    const val hilt = "com.google.dagger:hilt-android:2.36"
   }
 
   object Kotlin {

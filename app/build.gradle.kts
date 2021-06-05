@@ -1,4 +1,5 @@
-import java.util.*
+import java.util.Calendar
+import java.util.Locale
 
 plugins {
   id("com.android.application")
@@ -142,17 +143,10 @@ dependencies {
   implementation(Versions.Accompanist.systemUiController)
   implementation(Versions.Accompanist.swipeRefreshLayout)
   implementation(Versions.activity)
-  implementation(Versions.Compose.animation)
-  implementation(Versions.Compose.compiler)
-  implementation(Versions.Compose.foundation)
-  implementation(Versions.Compose.layout)
   implementation(Versions.Compose.iconsExtended)
   implementation(Versions.Compose.material)
-  implementation(Versions.Compose.runtime)
   implementation(Versions.Compose.ui)
-  implementation(Versions.Compose.uiTest)
   implementation(Versions.Compose.uiTooling)
-  implementation(Versions.Compose.uiUtil)
   implementation(Versions.constraintLayout)
   implementation(Versions.core)
   implementation(Versions.coroutine)
