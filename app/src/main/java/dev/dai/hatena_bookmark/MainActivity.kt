@@ -12,7 +12,6 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import dev.dai.hatena_bookmark.model.FeedCategory
 import dev.dai.hatena_bookmark.ui.component.ScrollableTabPager
 import dev.dai.hatena_bookmark.ui.feed.FeedScreen
@@ -44,20 +43,7 @@ private fun AppContent() {
     modifier = Modifier.fillMaxSize()
   ) {
     ScrollableTabPager(pageTitleList = FeedCategory.getCategoryNameList()) { page ->
-      FeedScreen(feedCategory = FeedCategory.fromOrdinal(page))
+      FeedScreen(feedCategoryName = FeedCategory.fromOrdinal(page).categoryName)
     }
-  }
-}
-
-@Composable
-fun Greeting(name: String) {
-  Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-  HatenaBookmarkComposeSampleTheme {
-    Greeting("Android")
   }
 }
