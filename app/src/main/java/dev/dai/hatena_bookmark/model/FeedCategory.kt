@@ -6,7 +6,6 @@ enum class FeedCategory(val categoryName: String) {
   ECONOMICS("政治と経済"),
   LIFE("暮らし");
 
-
   companion object {
     fun getCategoryNameList(): List<String> = values().map { it.categoryName }
 

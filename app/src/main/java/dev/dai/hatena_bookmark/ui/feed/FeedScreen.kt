@@ -16,7 +16,6 @@ fun FeedScreen(
 
   when {
     uiState.error != null -> {
-
     }
     else -> {
       FeedList(feedList = uiState.feedList, uiState.loading) {
