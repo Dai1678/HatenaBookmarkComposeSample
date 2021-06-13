@@ -2,31 +2,39 @@ package dev.dai.hatena_bookmark.api.xml
 
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.ElementList
-import org.simpleframework.xml.Path
+import org.simpleframework.xml.Namespace
+import org.simpleframework.xml.NamespaceList
 import org.simpleframework.xml.Root
 
-@Root(name = "rdf:RDF", strict = false)
+@NamespaceList(
+  Namespace(reference = "http://purl.org/rss/1.0/"),
+  Namespace(reference = "http://www.w3.org/1999/02/22-rdf-syntax-ns#", prefix = "rdf"),
+  Namespace(reference = "http://purl.org/dc/elements/1.1/", prefix = "dc"),
+  Namespace(reference = "http://www.hatena.ne.jp/info/xmlns#", prefix = "hatena")
+)
+@Namespace(reference = "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+@Root(name = "RDF", strict = false)
 data class FeedXml(
-  @ElementList(inline = true)
-  val feeds: List<FeedItemXml>
+  @field:ElementList(name = "item", inline = true, required = false)
+  var feeds: List<FeedItemXml>? = null
 )
 
 @Root(name = "item", strict = false)
 data class FeedItemXml(
-  @Element
-  val title: String,
+  @field:Element
+  var title: String = "",
 
-  @Element
-  val link: String,
+  @field:Element
+  var link: String = "",
 
-  @Element
-  val description: String,
+  @field:Element(required = false)
+  var description: String? = "",
 
-  @Path("hatena/bookmarkcount")
-  @Element
-  val bookmarkCount: Int,
+  @field:Element(name = "bookmarkcount")
+  @Namespace(reference = "http://www.hatena.ne.jp/info/xmlns#")
+  var bookmarkCount: Int = 0,
 
-  @Path("hatena/imageurl")
-  @Element
-  val imageUrl: String
+  @field:Element(name = "imageurl", required = false)
+  @Namespace(reference = "http://www.hatena.ne.jp/info/xmlns#")
+  var imageUrl: String? = ""
 )

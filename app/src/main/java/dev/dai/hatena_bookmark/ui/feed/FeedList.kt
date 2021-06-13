@@ -62,7 +62,7 @@ fun FeedItem(feed: Feed, isTopFeed: Boolean) {
       Spacer(modifier = Modifier.height(8.dp))
       if (isTopFeed) {
         Text(
-          text = feed.description,
+          text = feed.description ?: "",
           color = LocalContentColor.current.copy(alpha = 0.3f),
           style = MaterialTheme.typography.body2,
           maxLines = 3,

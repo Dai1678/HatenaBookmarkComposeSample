@@ -159,7 +159,11 @@ dependencies {
   implementation(Versions.material)
   implementation(Versions.navigation)
   implementation(Versions.Retrofit2.retrofit2)
-  implementation(Versions.Retrofit2.simpleXml)
+  implementation(Versions.Retrofit2.simpleXml) {
+    exclude(module = "stax")
+    exclude(module = "stax-api")
+    exclude(module = "xpp3")
+  }
   implementation(Versions.timber)
   kapt(Versions.Hilt.compiler)
   testImplementation(Versions.ArchCore.testing)

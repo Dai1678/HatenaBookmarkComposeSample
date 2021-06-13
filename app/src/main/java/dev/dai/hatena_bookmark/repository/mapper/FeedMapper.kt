@@ -6,7 +6,7 @@ import dev.dai.hatena_bookmark.model.Feed
 
 fun FeedXml.toFeedList(): List<Feed> {
   val feedList = arrayListOf<Feed>()
-  feeds.forEach {
+  feeds?.forEach {
     feedList.add(it.toFeed())
   }
   return feedList

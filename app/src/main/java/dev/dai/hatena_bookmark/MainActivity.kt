@@ -12,11 +12,14 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import dagger.hilt.android.AndroidEntryPoint
 import dev.dai.hatena_bookmark.model.FeedCategory
 import dev.dai.hatena_bookmark.ui.component.ScrollableTabPager
 import dev.dai.hatena_bookmark.ui.feed.FeedScreen
 import dev.dai.hatena_bookmark.ui.theme.HatenaBookmarkComposeSampleTheme
+import java.util.Locale
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -43,7 +46,7 @@ private fun AppContent() {
     modifier = Modifier.fillMaxSize()
   ) {
     ScrollableTabPager(pageTitleList = FeedCategory.getCategoryNameList()) { page ->
-      FeedScreen(feedCategoryName = FeedCategory.fromOrdinal(page).categoryName)
+      FeedScreen(feedCategoryName = FeedCategory.fromOrdinal(page).name.lowercase(Locale.ROOT))
     }
   }
 }
